@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciamento de Produtos</title>
+  <link rel="stylesheet" href="./produtos.css" />
+</head>
+<body>
+  <header role="banner">
+    <div class="logo-container">
+    
+    </div>
+    <h1>Estoque - Administração</h1>
+    <ul class="utilities">
+
+    </ul>
+  </header>
+
+  <main role="main">
+    <!-- Formulário de Cadastro -->
+    <section class="painel importante">
+      <h2>Adicionar Produto</h2><br>
+      <form method="post">
+        <p>Nome do Produto:</p>
+        <input type="text" id="enunciado" placeholder="Ex: Notebook Dell" maxlength="100" />
+
+        <p>Preço:</p>
+        <input type="number" id="alternativa_a" placeholder="Ex: 3500.00" step="0.01" />
+
+        <p>Quantidade:</p>
+        <input type="number" id="alternativa_b" placeholder="Ex: 10" />
+
+        <p>Descrição</p>
+        <input type="text" id="descricao" placeholder="Ex: Notebook Dell i7, 16GB RAM, 512GB SSD" maxlength="200" />
+        <p>Categoria:</p>
+        <input type="text" id="alternativa_c" placeholder="Ex: Informática" maxlength="50" />
+
+        <div>
+          <input type="submit" id="cadastrar" value="Salvar Produto" />
+        </div>
+      </form>
+    </section>
+
+    <!-- Lista de Produtos -->
+    <section class="painel2">
+      <h2>Produtos em Estoque</h2>
+    </section>
+    <div id="produtoList">
+      <!-- Os produtos serão carregados dinamicamente aqui -->
+    </div>
+
+    <!-- Modal de Edição -->
+    <dialog id="modal-editar">
+      <form method="dialog" id="form-editar">
+        <h2>Editar Produto</h2>
+        <input type="text" id="edit-nome" placeholder="Nome do Produto" /><br>
+        <input type="number" id="edit-preco" placeholder="Preço" step="0.01" /><br>
+        <input type="number" id="edit-quantidade" placeholder="Quantidade" /><br>
+        <input type="text" id="edit-categoria" placeholder="Categoria" /><br><br>
+
+        <button id="salvar-edicao" type="button">Salvar</button>
+        <button class="close-modal" type="button">Fechar</button>
+      </form>
+    </dialog>
+  </main>
+
+  <script src="produtos.js"></script>
+</body>
+</html>
